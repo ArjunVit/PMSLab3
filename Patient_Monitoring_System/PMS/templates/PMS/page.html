@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Data</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Patient Data</h1>
+    <table>
+        <tr>
+            <th>Patient ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Heart Rate</th>
+            <th>Blood Pressure</th>
+            <th>Respiratory Rate</th>
+        </tr>
+        {% for patient in data %}
+        <tr>
+            <td>{{ patient.patient_id }}</td>
+            <td>{{ patient.name }}</td>
+            <td>{{ patient.age }}</td>
+            <td>{{ patient.heart_rate }}</td>
+            <td>{{ patient.blood_pressure }}</td>
+            <td>{{ patient.respiratory_rate }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
